@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surprise Page</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #e7939e, #8dace2);
+      font-size: medium;
+      font-style: italic;
+      text-align: center;
+      padding-bottom: 100px;
+    }
+
+    marquee {
+      background-color: #fcd6db;
+      color: #6a0572;
+      font-size: 24px;
+      padding: 10px;
+    }
+
+    .spacer {
+      height: 400px;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 10px 20px;
+      background-color: #fff;
+      border: 2px solid #6a0572;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #6a0572;
+    }
+
+    button:hover {
+      background-color: #fcd6db;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="scroll" direction="left" scrollamount="10">
+    This is not a surprise!😏 or Maybe it is 😗 | Warning ⚠️!This is not a surprise!😏 or Maybe it is 😗 | Warning ⚠️!
+  </marquee>
+
+  <br><br>
+
+  <h1>Guess The Lyrics 😌⬇</h1>
+  <br><br><br><br><br>
+
+  <!-- Lyrics Input -->
+  <p>🎶 Complete the lyrics: <br><br> "Kade milke betho Gal kriye...."</p>
+  <input id="lyricInput" type="text" placeholder="Type the next two words..." style="padding: 6px; border-radius: 5px;" />
+  <button onclick="checkAnswer()">Submit</button>
+
+  <div class="spacer"></div>
+
+  <!-- Target meme section to scroll into view -->
+  <div id="memeSection">
+    <img src="cat.webp" alt="meme" width="500" height="400">
+    <h2>Nothing Special Here, Right!?</h2>
+
+    <a href="again.html">
+      <button type="button">Don't Click Here! 🙄</button>
+    </a>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("lyricInput").value.toLowerCase().trim();
+      const correct = "pyaar di"; // change to your lyric answer
+
+      if (input === correct) {
+        document.getElementById("memeSection").scrollIntoView({ behavior: "smooth" });
+      } else {
+        alert("Wrong answer! Try again, singer 😜");
+      }
+    }
+  </script>
+</body>
+</html>
+
