@@ -4,14 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.0/dist/fireworks.umd.min.js"></script>
 </head>
 <body>
+    <div id="fireworks-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+<div class="marquee-container">  
 <marquee behavior="scroll" direction="left" scrollamount="10" 
-style ="background: linear-gradient(to right, #fcd6db, #a6c1ee);color: #ffffff;font-size: 24px;">
+style ="background: linear-gradient(to right, #f6b4bc, #94b8f7);color: #ffffff;font-size: 24px;">
 ❤(^///^)Happy Birthday to you❤(^///^) | ❤(^///^)Happy Birthday to you❤(^///^)❤(^///^)Happy Birthday to you❤(^///^) | ❤(^///^)Happy Birthday to you❤(^///^)
 
     </marquee>
+    </div>
+<div class="card">
+  <h1>HAPPY BIRTHDAY TO YOU💖</h1>
+  <img src="cake_love-removebg-preview.png" alt="Birthday Cake" height="200" width="200">
+  <p>Wishing you a day filled with laughter, joy, and all your favorite things! 💖</p>
+  <p>You’re someone who deserves all the good in this world. This surprise? Just a small piece of how special you are. 🌟</p>
+  <p class="signature">— From Someone Who Cares 🌸</p>
+</div>
+<script>
+  const container = document.getElementById('fireworks-container');
+  const fireworks = new Fireworks.default(container, {
+    hue: { min: 0, max: 360 },
+    delay: { min: 15, max: 30 },
+    rocketsPoint: 50,
+    speed: 2,
+    acceleration: 1.05,
+    friction: 0.95,
+    gravity: 1.5,
+    particles: 80,
+    trace: 3,
+    explosion: 5,
+    autoresize: true,
+    brightness: { min: 50, max: 80 },
+    decay: { min: 0.015, max: 0.03 },
+    mouse: { click: false, move: false, max: 1 }
+  });
+  fireworks.start();
+</script>
 
-    
 </body>
 </html>

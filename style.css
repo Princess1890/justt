@@ -1,0 +1,61 @@
+body{
+    background:linear-gradient(to right, #ffc9ff, #b4dff3); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.marquee-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+body{
+    margin-top: 10px;;
+}
+
+.card {
+  background: #e99c9c03; /* translucent white */
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(27, 26, 26, 0.862);
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+  font-family:  Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card h1 {
+  font-size: 36px;
+  color: #ff4f81;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.card .signature {
+  margin-top: 30px;
+  font-style: italic;
+  color: #6a0572;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
