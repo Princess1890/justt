@@ -15,7 +15,7 @@
         cursor: url('https://cur.cursors-4u.net/cursors/cur-9/cur817.cur'), auto;
     }
     .spacer{
-        height:50px
+        height:30px
     }
     marquee {
         background-color: #f7b6be;
@@ -26,15 +26,71 @@
 
 </style>
 <body>
-    <marquee behavior="scroll" direction="left" scrollamount="10">🥱TOLD YOU DON'T CLICK👀 | MR.CURIOUS🤭|</marquee>
+    <marquee behavior="scroll" direction="left" scrollamount="15">🥱TOLD YOU DON'T CLICK👀 | MR.CURIOUS🤭|</marquee>
 
     <div class="spacer"></div>
+    
     <h3>Chalo ab Click kar hi diya hai tho👀</h3>
     <img src="cute.gif" alt="cute" width="300" height="200">
-    <p>Wapas Click karo ab😁😉</p>
-    <a href="main.html">
-        <button type="button">Click Me!🤭</button>
-    </a>
-    
+
+    <div id="quizSection">
+  <h3>Yeh bhi bata do😉</h3>
+
+  <div id="q1">
+    <p><b>Q1. What is the city of love? 💖</b></p>
+    <input type="text" id="a1" placeholder="Type here..." />
+    <button onclick="checkQ1()">Submit</button>
+  </div>
+
+  <div id="q2" style="display:none;">
+    <p><b>Q2. What did I bring secretly for you guys in practicals? 😋</b></p>
+    <input type="text" id="a2" placeholder="Hint: Sweet 😉" />
+    <button onclick="checkQ2()">Submit</button>
+  </div>
+
+  <div id="q3" style="display:none;">
+    <p><b>Q3. What suits you more on your face?</b></p>
+    <input type="text" id="a3" placeholder="Hint:😊" />
+    <button onclick="checkQ3()">Submit</button>
+  </div>
+</div>
+    <a href="main.html" id="finalButton" style="display:none;">
+  <button type="button">Click Me!🤭</button>
+</a>
+<script>
+function checkQ1() {
+  const answer = document.getElementById("a1").value.toLowerCase().trim();
+  if(answer === "paris") {
+    document.getElementById("q2").style.display = "block";
+  } else {
+    alert("Oops! Think again. Hint: It's romantic ❤️");
+  }
+}
+
+function checkQ2() {
+  const answer = document.getElementById("a2").value.toLowerCase().trim();
+  if(answer === "chocolate") {
+    document.getElementById("q3").style.display = "block";
+  } else {
+    alert("Nahi mila! 🤭 Kya khilaya tha yaad karo... ch__l__e");
+  }
+}
+function checkQ3() {
+  const answer = document.getElementById("a3").value.toLowerCase().trim();
+  if(answer === "smile") {
+    document.getElementById("finalButton").style.display = "inline-block";
+    alert("Yay! You got all correct 😁 Always keep smiling and shining");
+
+    // Scroll smoothly to the button 
+    document.getElementById("finalButton").scrollIntoView({ behavior: "smooth" });
+  } else {
+    alert("Clue: hehehe");
+  }
+}
+
+
+
+
+</script>
 </body>
 </html>
