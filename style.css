@@ -1,5 +1,5 @@
 body{
-    background:linear-gradient(to right, #ffc9ff, #b4dff3); 
+    background-image: url('fireworks-15757_512.gif'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -25,7 +25,7 @@ body{
 }
 
 .card {
-  background: #e99c9c03; /* translucent white */
+  background:linear-gradient(to right, #ffffffe9, #ffffffc6); /* translucent white */
   padding: 40px 30px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(27, 26, 26, 0.862);
