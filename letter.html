@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift 2 💌</title>
+    <link rel="stylesheet" href="letter.css">
+</head>
+<body>
+
+<div class="stars">
+    <span>✦</span>
+    <span>✧</span>
+    <span>✦</span>
+    <span>✧</span>
+    <span>✦</span>
+    <span>✧</span>
+</div>
+
+<div class="container">
+
+    <h1>💌</h1>
+
+    <p>Something written just for you...</p>
+
+    <div class="envelope" id="envelope">
+        ✉️
+    </div>
+
+    <button onclick="openLetter()" id="openBtn">
+        Open Letter
+    </button>
+
+    <div class="letter hidden" id="letterBox">
+        <p>
+            Happy Birthday❤🎂<br><br>
+
+            I hope this year brings you happiness, peace, good memories,
+            and everything you’ve been wishing for.
+            Thank You for being in my life. 
+            I am so lucky to have you in my life. <br><br>
+
+            I am always here for you, through the good times and the bad.
+            just know that i will always be there for you , 
+            u can share anything with me and 
+            I will always be there to listen and support you. <br><br>
+
+             Every moment with you is special to me, and 
+             I cherish every memory we’ve made together.<br><br>
+             
+             I saw the happiest version of myslef when I am with you. I am so comfortable around you 
+             and I can be myself around you. I say silly things sometimes lame jokes , reels.
+             All this are just my way of expressing how much I care about you and 
+             how much I want to make you smile. <br><br>
+
+             I am bad  at talking face to face , I don't know to express how to put it in words.
+             and I don't know if u will read this or not but I just want to say I am always here.
+             and I hope the u are doing great there I want to
+             say  that you are really special for me. I am always proud of  u and I know one day everthing will be great for you. <br><br>
+             
+             The letter is getting too long i guess there's many more things to say but I should just stop here for now. 
+             But i cant stop ahhhh. sorry for making you read so much.<br><br>
+
+             THANK YOU FOR BEING ONE OF MOST BEAUTIFUL PART OF MY LIFE❤❤. I WISH YOU ALL THE BEST IN LIFE AND I HOPE YOU GET EVERYTHING YOU DESERVE.
+             AND  I WILL ALWAYS BE THERE FOR YOU.JUST DON'T FORGET THIS. <br><br>
+
+
+
+            Keep smiling, keep riding, and keep being yourself.
+            That suits you the best.😌Just call me whenever you need me I will always be there just don't hesitate to reach out.<br><br>
+
+            Enjoy your day. Once again, Happy Birthday! 🎂🎉May god bless u, Maybe life will surprise us again someday.☺
+        </p>
+    </div>
+
+    <a href="gift.html" class="btn hidden" id="backBtn">
+        Back to Gifts 🎁
+    </a>
+
+</div>
+
+<script>
+function openLetter(){
+    document.getElementById("envelope").style.display = "none";
+    document.getElementById("openBtn").style.display = "none";
+
+    document.getElementById("letterBox").classList.remove("hidden");
+    document.getElementById("backBtn").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>

@@ -1,84 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hello World💗🌎</title>
-  <style>
-    body {
-      background: linear-gradient(to right, #e7939e, #8dace2);
-      font-size: medium;
-      font-style: italic;
-      text-align: center;
-      padding-bottom: 100px;
-      cursor:pointer
-    }
-
-    marquee {
-      background-color: #fcd6db;
-      color: #6a0572;
-      font-size: 24px;
-      padding: 10px;
-    }
-
-    .spacer {
-      height: 400px;
-    }
-
-    button {
-      font-size: 16px;
-      padding: 10px 20px;
-      background-color: #fff;
-      border: 2px solid #6a0572;
-      border-radius: 10px;
-      cursor: pointer;
-      color: #6a0572;
-    }
-
-    button:hover {
-      background-color: #fcd6db;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World💗</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <marquee behavior="scroll" direction="left" scrollamount="10">
-   Warning ⚠️! This is not a surprise!😏 or Maybe it is 😗 | Warning ⚠️!This is not a surprise!😏 or Maybe it is 😗 |
-  </marquee>
+    <!-- Meme Section -->
+    <div class="meme-container">
+        <img src="dog_meme-removebg-preview.png" alt="Funny Meme" class="meme">
+        <!-- Replace meme.jpg with your meme image -->
+    </div>
 
-  <br><br><br>
+    <!-- Main Card -->
+    <div class="card">
 
+        <h1 id="title">Is something special today? 👀</h1>
 
-  <h1>Do this😌⬇</h1>
-  <img src="khaby-removebg-preview.png" alt="khaby" width="400" height="200">
+        <p id="message">
+            do you remember ?
+        </p>
 
-  <!-- Lyrics Input -->
-  <p>🎶 Complete the lyrics: <br><br><b> "Kade milke betho Gal kriye....."</b></p>
-  <input id="lyricInput" type="text" placeholder="Type the next two words..." style="padding: 6px; border-radius: 5px;" />
-  <button onclick="checkAnswer()">Submit</button>
+        <div id="buttons" class="buttons">
+            <button onclick="yesPath()">YES</button>
+            <button onclick="firstNo()">NO</button>
+        </div>
 
-  <div class="spacer"></div>
+        <a href="countdown.html" id="continueBtn" class="continue-btn">
+            Let's see what's so special 👀
+        </a>
 
-  <!-- Target meme section to scroll into view -->
-    <img src="cat.webp" alt="meme" width="400" height="400">
-    <h2>Nothing Special Here, Right!?</h2>
-<div id="memeSection">
-    <a href="again.html">
-      <button type="button">Don't Click Here! 🙄</button>
-    </a>
-  </div>
+    </div>
 
-  <script>
-    function checkAnswer() {
-      const input = document.getElementById("lyricInput").value.toLowerCase().trim();
-      const correct = "pyaar di"; // change to your lyric answer
+<script>
 
-      if (input === correct) {
-        document.getElementById("memeSection").scrollIntoView({ behavior: "smooth" });
-      } else {
-        alert("Wrong answer! Try again, singer 😜");
-      }
-    }
-  </script>
+function yesPath() {
+    document.getElementById("title").innerHTML = "😌";
+    document.getElementById("message").innerHTML =
+    "Cool... You guessed it right.";
+
+    document.getElementById("buttons").style.display = "none";
+    document.getElementById("continueBtn").style.display = "inline-block";
+}
+
+function firstNo() {
+
+    document.getElementById("title").innerHTML = "🤨";
+    document.getElementById("message").innerHTML =
+    "Are you sure?";
+
+    document.getElementById("buttons").innerHTML = `
+        <button onclick="sureYes()">YES</button>
+        <button onclick="sureNo()">NO</button>
+    `;
+}
+
+function sureYes() {
+
+    document.getElementById("title").innerHTML = "🤭";
+    document.getElementById("message").innerHTML =
+    "Expected from you.";
+
+    document.getElementById("buttons").style.display = "none";
+    document.getElementById("continueBtn").style.display = "inline-block";
+}
+
+function sureNo() {
+
+    document.getElementById("title").innerHTML = "😌";
+    document.getElementById("message").innerHTML =
+    "See? You guessed it right.";
+
+    document.getElementById("buttons").style.display = "none";
+    document.getElementById("continueBtn").style.display = "inline-block";
+}
+
+</script>
+
 </body>
 </html>

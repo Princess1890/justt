@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Countdown 🎂</title>
+    <link rel="stylesheet" href="countdown.css">
+</head>
+<body>
+     <div class="background-blobs">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+</div>
+<div class="stars">
+    <span>✦</span>
+    <span>✧</span>
+    <span>✦</span>
+    <span>✧</span>
+    <span>✦</span>
+    <span>✧</span>
+    <span>✦</span>
+    <span>✧</span>
+    <span>✦</span>
+    <span>✧</span>
+    <span>✦</span>
+    <span>✧</span>
+    <span>✦</span>
+    <span>✧</span>
+</div>
+    <div class="container">
+
+        <h1 id="count">3</h1>
+
+        <div id="cake" class="hidden">
+            <img src="cake-removebg-preview.png" alt="Birthday Cake">
+        </div>
+
+        <h2 id="birthdayText" class="hidden"></h2>
+
+        <p id="subText" class="hidden">
+            Wishing you a day filled with love, laughter, and unforgettable memories. May this year bring you endless joy and success.
+        </p>
+
+        <a href="gift.html" id="nextBtn" class="hidden btn">
+            I Have Something for You! 🎁
+        </a>
+
+    </div>
+
+<script>
+
+let sequence = ["3", "2", "1", "💥 BOOM"];
+let index = 0;
+let countElement = document.getElementById("count");
+
+let countdown = setInterval(() => {
+
+    countElement.innerHTML = sequence[index];
+
+    if(sequence[index] === "💥 BOOM"){
+        document.body.classList.add("shake");
+
+        setTimeout(() => {
+            document.body.classList.remove("shake");
+        }, 500);
+    }
+
+    index++;
+
+    if(index === sequence.length){
+
+        clearInterval(countdown);
+
+        setTimeout(() => {
+
+            countElement.style.display = "none";
+
+            document.getElementById("cake").classList.remove("hidden");
+
+            createConfetti();
+
+            setTimeout(() => {
+                typeWriter();
+            }, 1200);
+
+        }, 1000);
+    }
+
+}, 1000);
+
+
+function typeWriter() {
+
+    let text = "HAPPY BIRTHDAY ❤";
+    let i = 0;
+    let birthdayText = document.getElementById("birthdayText");
+
+    birthdayText.classList.remove("hidden");
+
+    let typing = setInterval(() => {
+
+        birthdayText.innerHTML += text.charAt(i);
+        i++;
+
+        if(i === text.length){
+            clearInterval(typing);
+
+            document.getElementById("subText").classList.remove("hidden");
+            document.getElementById("nextBtn").classList.remove("hidden");
+        }
+
+    }, 100);
+}
+
+
+function createConfetti(){
+
+    for(let i = 0; i < 120; i++){
+
+        let confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+
+        confetti.style.left = Math.random() * 100 + "vw";
+
+        confetti.style.animationDuration =
+        (Math.random() * 3 + 2) + "s";
+
+        confetti.style.backgroundColor =
+        `hsl(${Math.random()*360},100%,70%)`;
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+            confetti.remove();
+        }, 5000);
+    }
+}
+
+</script>
+
+</body>
+</html>
